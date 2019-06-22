@@ -1,0 +1,1 @@
+﻿<%@ Page Inherits="FP_Editor.uploadajax,FP_Editor" %>
