@@ -6,7 +6,7 @@
 <script runat="server">
 override protected void OnInitComplete(EventArgs e)
 {
-	/*方配软件技术有限公司(WMS框架)，官方网站：http://www.fangpage.com，生成时间：2018-11-19 11:43:24*/
+	/*方配软件技术有限公司(WMS框架)，官方网站：http://www.fangpage.com，生成时间：2019-06-27 10:18:32*/
 	base.OnInitComplete(e);
 	int loop__id=0;
 	ViewBuilder.Append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n");
@@ -139,8 +139,8 @@ override protected void OnInitComplete(EventArgs e)
 	ViewBuilder.Append("          <div class=\"newsicon\">\r\n");
 	ViewBuilder.Append("            <ul>\r\n");
 	ViewBuilder.Append("              <li style=\"background: url(" + adminpath.ToString() + "images/delete.gif) 2px 6px no-repeat\"><a id=\"submitdel\" href=\"#\">删除</a></li>\r\n");
-	ViewBuilder.Append("              <li style=\"background: url(" + webpath.ToString() + "sites/app/news/images/move.gif) 2px 6px no-repeat\"><a id=\"btn_remove\" href=\"javascript:void();\">移动</a></li>\r\n");
-	ViewBuilder.Append("              <li style=\"background: url(" + webpath.ToString() + "sites/app/news/images/copy.gif) 2px 6px no-repeat\"><a id=\"btn_copy\" href=\"javascript:void();\">复制</a></li>\r\n");
+	ViewBuilder.Append("              <li style=\"background: url(images/move.gif) 2px 6px no-repeat\"><a id=\"btn_remove\" href=\"javascript:void();\">移动</a></li>\r\n");
+	ViewBuilder.Append("              <li style=\"background: url(images/copy.gif) 2px 6px no-repeat\"><a id=\"btn_copy\" href=\"javascript:void();\">复制</a></li>\r\n");
 	ViewBuilder.Append("              <li style=\"background: url(" + adminpath.ToString() + "images/add.gif) 2px 6px no-repeat\"><a href=\"imgadd.aspx?sortid=" + sortid.ToString() + "&typeid=" + typeid.ToString() + "\">添加</a></li>\r\n");
 	ViewBuilder.Append("              <li style=\"background: url(" + adminpath.ToString() + "images/refresh.gif) 2px 6px no-repeat\"><a href=\"imgmanage.aspx?sortid=" + sortid.ToString() + "&typeid=" + typeid.ToString() + "\">刷新</a> </li>\r\n");
 	ViewBuilder.Append("              <li style=\"float:right; width:auto\"><strong>" + sortinfo.name.ToString().Trim() + "</strong></li>\r\n");
@@ -183,13 +183,13 @@ override protected void OnInitComplete(EventArgs e)
 	if (news.status==1)
 	{
 
-	ViewBuilder.Append("              <img src=\"" + webpath.ToString() + "sites/app/news/images/state1.gif\" width=\"16\" height=\"14\">\r\n");
+	ViewBuilder.Append("              <img src=\"images/state1.gif\" width=\"16\" height=\"14\">\r\n");
 
 	}
 	else
 	{
 
-	ViewBuilder.Append("              <img src=\"" + webpath.ToString() + "sites/app/news/images/state0.gif\" width=\"14\" height=\"14\">\r\n");
+	ViewBuilder.Append("              <img src=\"images/state0.gif\" width=\"14\" height=\"14\">\r\n");
 
 	}	//end if
 

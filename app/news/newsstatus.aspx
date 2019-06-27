@@ -6,7 +6,7 @@
 <script runat="server">
 override protected void OnInitComplete(EventArgs e)
 {
-	/*方配软件技术有限公司(WMS框架)，官方网站：http://www.fangpage.com，生成时间：2019-06-19 10:17:28*/
+	/*方配软件技术有限公司(WMS框架)，官方网站：http://www.fangpage.com，生成时间：2019-06-27 10:18:33*/
 	base.OnInitComplete(e);
 	int loop__id=0;
 	ViewBuilder.Append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n");
@@ -104,13 +104,13 @@ override protected void OnInitComplete(EventArgs e)
 	if (news.status==1)
 	{
 
-	ViewBuilder.Append("              <img src=\"" + webpath.ToString() + "sites/app/news/images/state1.gif\" width=\"16\" height=\"14\">\r\n");
+	ViewBuilder.Append("              <img src=\"images/state1.gif\" width=\"16\" height=\"14\">\r\n");
 
 	}
 	else
 	{
 
-	ViewBuilder.Append("              <img src=\"" + webpath.ToString() + "sites/app/news/images/state0.gif\" width=\"14\" height=\"14\">\r\n");
+	ViewBuilder.Append("              <img src=\"images/state0.gif\" width=\"14\" height=\"14\">\r\n");
 
 	}	//end if
 
