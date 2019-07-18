@@ -1,31 +1,30 @@
 <%@ Page language="c#" AutoEventWireup="false" EnableViewState="false" Inherits="FangPage.WMS.Admin.runsql" %>
+<%@ Import namespace="System.Collections.Generic" %>
+<%@ Import namespace="FangPage.Common" %>
 <%@ Import namespace="FangPage.MVC" %>
 <%@ Import namespace="FangPage.WMS.Admin" %>
-
 <%@ Import namespace="FangPage.WMS.Model" %>
 <script runat="server">
-override protected void OnInitComplete(EventArgs e)
+protected override void View()
 {
-	/*方配软件技术有限公司(WMS框架)，官方网站：http://www.fangpage.com，生成时间：2015-10-20 15:41:16*/
-	base.OnInitComplete(e);
-	int loop__id=0;
+	base.View();
 	ViewBuilder.Append("<!doctype html>\r\n");
 	ViewBuilder.Append("<html>\r\n");
 	ViewBuilder.Append("<head>\r\n");
 	ViewBuilder.Append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n");
 	ViewBuilder.Append("<title>在线运行SQL语句</title>\r\n");
-	ViewBuilder.Append("	" + meta.ToString() + "\r\n");
-	ViewBuilder.Append("<link href=\"../css/admin.css\" rel=\"stylesheet\" type=\"text/css\">\r\n");
-	ViewBuilder.Append("<script type=\"text/javascript\" src=\"" + plupath.ToString() + "jquery/jquery.js\"></");
+	ViewBuilder.Append("	" + echo(meta) + "\r\n");
+	ViewBuilder.Append("<link href=\"" + echo(webpath) + "" + echo(sitepath) + "/statics/css/admin.css\" rel=\"stylesheet\" type=\"text/css\">\r\n");
+	ViewBuilder.Append("<script type=\"text/javascript\" src=\"" + echo(plupath) + "jquery/jquery.js\"></");
 	ViewBuilder.Append("script>\r\n");
-	ViewBuilder.Append("<link rel=\"stylesheet\" href=\"" + webpath.ToString() + "plugins/codemirror/codemirror.css\">\r\n");
-	ViewBuilder.Append("<script type=\"text/javascript\" src=\"" + webpath.ToString() + "plugins/codemirror/js/codemirror.js\"></");
+	ViewBuilder.Append("<link rel=\"stylesheet\" href=\"" + echo(webpath) + "plugins/codemirror/codemirror.css\">\r\n");
+	ViewBuilder.Append("<script type=\"text/javascript\" src=\"" + echo(webpath) + "plugins/codemirror/js/codemirror.js\"></");
 	ViewBuilder.Append("script>\r\n");
-	ViewBuilder.Append("<script type=\"text/javascript\" src=\"../js/admin.js\"></");
+	ViewBuilder.Append("<script type=\"text/javascript\" src=\"" + echo(webpath) + "" + echo(sitepath) + "/statics/js/admin.js\"></");
 	ViewBuilder.Append("script>\r\n");
 	ViewBuilder.Append("<script type=\"text/javascript\">\r\n");
 	ViewBuilder.Append("    $(function () {\r\n");
-	ViewBuilder.Append("        PageNav(\"在线运行SQL语句,dbset/" + pagename.ToString() + "\");\r\n");
+	ViewBuilder.Append("        PageNav(\"在线运行SQL语句,dbset/" + echo(pagename) + "\");\r\n");
 	ViewBuilder.Append("    })\r\n");
 	ViewBuilder.Append("</");
 	ViewBuilder.Append("script>\r\n");
@@ -86,11 +85,11 @@ override protected void OnInitComplete(EventArgs e)
 	ViewBuilder.Append("                        <div class=\"editer-col1\">\r\n");
 	ViewBuilder.Append("                            <form id=\"frmpost\" name=\"frmpost\" action=\"\" method=\"post\">\r\n");
 	ViewBuilder.Append("                                <div class=\"clearfix editer-toolbar\">\r\n");
-	ViewBuilder.Append("                                    <input class=\"button\" type=\"submit\" value=\"运行语句\" name=\"save\" style=\"background-image: url(../images/run.png);\">\r\n");
-	ViewBuilder.Append("                                    <input class=\"button\" type=\"button\" value=\"自动换行\" onclick=\"editor.toggleWrapping();\" style=\"background-image: url(../images/wordwrap.gif);\">\r\n");
+	ViewBuilder.Append("                                    <input class=\"button\" type=\"submit\" value=\"运行语句\" name=\"save\" style=\"background-image: url(" + echo(webpath) + "" + echo(sitepath) + "/statics/images/run.png);\">\r\n");
+	ViewBuilder.Append("                                    <input class=\"button\" type=\"button\" value=\"自动换行\" onclick=\"editor.toggleWrapping();\" style=\"background-image: url(" + echo(webpath) + "" + echo(sitepath) + "/statics/images/wordwrap.gif);\">\r\n");
 	ViewBuilder.Append("                                </div>\r\n");
 	ViewBuilder.Append("                                <div class=\"editer-area\">\r\n");
-	ViewBuilder.Append("                                    <textarea cols=\"50\" rows=\"28\" style=\"width: 100%;\" name=\"sqlstring\" id=\"FileEditor\">" + sqlstring.ToString() + "</textarea>\r\n");
+	ViewBuilder.Append("                                    <textarea cols=\"50\" rows=\"28\" style=\"width: 100%;\" name=\"sqlstring\" id=\"FileEditor\">" + echo(sqlstring) + "</textarea>\r\n");
 	ViewBuilder.Append("                                </div>\r\n");
 	ViewBuilder.Append("                            </form>\r\n");
 	ViewBuilder.Append("                        </div>\r\n");
@@ -101,9 +100,9 @@ override protected void OnInitComplete(EventArgs e)
 	ViewBuilder.Append("                                containerID: 'TheEditor',\r\n");
 	ViewBuilder.Append("                                lineNumbers: true,\r\n");
 	ViewBuilder.Append("                                textWrapping: false,\r\n");
-	ViewBuilder.Append("                                path: \"" + webpath.ToString() + "plugins/codemirror/js/\",\r\n");
+	ViewBuilder.Append("                                path: \"" + echo(webpath) + "plugins/codemirror/js/\",\r\n");
 	ViewBuilder.Append("                                parserfile: ['parsexml.js', 'parsecss.js', 'tokenizejavascript.js', 'parsejavascript.js', 'parsehtmlmixed.js'],\r\n");
-	ViewBuilder.Append("                                stylesheet: ['" + webpath.ToString() + "plugins/codemirror/css/xmlcolors.css', '" + webpath.ToString() + "plugins/codemirror/css/jscolors.css', '" + webpath.ToString() + "plugins/codemirror/css/csscolors.css']\r\n");
+	ViewBuilder.Append("                                stylesheet: ['" + echo(webpath) + "plugins/codemirror/css/xmlcolors.css', '" + echo(webpath) + "plugins/codemirror/css/jscolors.css', '" + echo(webpath) + "plugins/codemirror/css/csscolors.css']\r\n");
 	ViewBuilder.Append("                            });\r\n");
 	ViewBuilder.Append("                        </");
 	ViewBuilder.Append("script>\r\n");
@@ -117,7 +116,17 @@ override protected void OnInitComplete(EventArgs e)
 	ViewBuilder.Append("    </div>\r\n");
 	ViewBuilder.Append("</body>\r\n");
 	ViewBuilder.Append("</html>\r\n");
-
+	if(iswrite==0)
+	{
 	Response.Write(ViewBuilder.ToString());
+	}
+	else if(iswrite==1)
+	{
+	Hashtable hash = new Hashtable();
+	hash["errcode"] = 0;
+	hash["errmsg"] ="";
+	hash["html"]=ViewBuilder.ToString();
+	FPResponse.WriteJson(hash);
+	}
 }
 </script>

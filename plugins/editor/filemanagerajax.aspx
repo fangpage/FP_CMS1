@@ -1,1 +1,1 @@
-﻿<%@ Page Inherits="FP_Editor.filemanagerajax,FP_Editor" %>
+﻿<%@ Page Inherits="FP_Editor.Controller.filemanagerajax,FP_Editor" %>
